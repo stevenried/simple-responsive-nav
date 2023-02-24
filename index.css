@@ -1,0 +1,126 @@
+:root {
+  --light-text: rgb(217, 215, 215);
+  --white: rgb(254, 253, 253);
+}
+
+body {
+  margin: 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+section#hero {
+  background-image: url(./img/hero-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#hero h1 {
+  padding: 1rem;
+  font-size: 3rem;
+  color: var(--white);
+}
+
+section#description {
+  padding: 1rem;
+}
+
+section#description p {
+  font-family: sans-serif;
+}
+
+.main-navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.main-navbar .brand {
+  padding: 0.75rem 1rem;
+  color: var(--light-text);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding-right: 1rem;
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+  font-family: sans-serif;
+}
+
+.navbar-links ul li a {
+  color: var(--light-text);
+  text-decoration: none;
+}
+
+#navbar-links-toggle {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+#navbar-links-toggle svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: var(--light-text);
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+}
+
+#navbar-links-toggle .open-icon {
+  display: block;
+}
+
+#navbar-links-toggle .close-icon {
+  display: none;
+}
+
+#navbar-links-toggle.open .open-icon {
+  display: none;
+}
+
+#navbar-links-toggle.open .close-icon {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  #navbar-links-toggle {
+    display: block;
+  }
+
+  .main-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    width: 100%;
+    display: none;
+  }
+
+  .navbar-links.open {
+    display: block;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
