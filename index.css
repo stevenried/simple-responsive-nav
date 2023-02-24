@@ -16,12 +16,24 @@ section#hero {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 section#hero h1 {
   padding: 1rem;
   font-size: 3rem;
   color: var(--white);
+}
+
+section#hero small {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  color: var(--light-text);
+}
+
+small a {
+  color: var(--light-text);
 }
 
 section#description {
